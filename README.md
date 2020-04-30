@@ -5,6 +5,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Resources / Inspiration
 - [css-colors](https://www.rapidtables.com/web/css/css-color.html)
 
+## Ideas
+- Itten
+  - Color variant to improve warm / cold vs. complementary
+  - Dreiecke
+- Gebäude nachbauen: z.B Berghain
+  - Georg: le corbusier
+  - [le corbusier sunken villa](https://www.dezeen.com/2018/08/01/le-corbusiers-villa-savoye-sunk-danish-fjordasmund-havsteen-mikkelsen-installation/)
+- Gestaltgesetze abbilden. Diagonal, etc...
+- Die grauen Kästen noch mit diagonalen / vertikalen / horizontalen linien verbinden
+- Automation: .active = :hover so I can set states programmatically.
+
 ## Available Scripts
 
 In the project directory, you can run:
