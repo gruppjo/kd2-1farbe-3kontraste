@@ -1,0 +1,76 @@
+@import 'shared.scss';
+
+/* COLORGRIDBROKEN */
+.colorGridBroken {
+  @include colorGrid;
+
+  grid-template-areas:
+  "header header header header header header header header"
+  "header header header header header header header header"
+  "building building building building building building building building"
+  "building building building building building building building building"
+  "building building building building building building building building"
+  "building building building building building building building building"
+  ;
+
+  .building {
+    grid-area: building;
+    &:hover {
+      /* RED */
+      .redDark {
+        background-color: $colorYellow;
+      }
+      .red {
+        background-color: $colorOrange;
+      }
+      .orange {
+        background-color: $colorRed;
+      }
+      .yellow {
+        background-color: $colorRedDark;
+      }
+
+      /* BLUE */
+      .blueLighter {
+        background-color: $colorBlueDark;
+      }
+      .blueLight {
+        background-color: $colorBlue;
+      }
+      .blue {
+        background-color: $colorBlueLight;
+      }
+      .blueDark {
+        background-color: $colorBlueLighter;
+      }
+
+      /* GREEN */
+      .greenLighter {
+        background-color: $colorGreenDark;
+      }
+      .greenLight {
+        background-color: $colorGreen;
+      }
+      .green {
+        background-color: $colorGreenLight;
+      }
+      .greenDark {
+        background-color: $colorGreenLighter;
+      }
+
+      /* GRAY */
+      .grayLighter {
+        background-color: $colorGrayDark;
+      }
+      .grayLight {
+        background-color: $colorGray;
+      }
+      .gray {
+        background-color: $colorGrayLight;
+      }
+      .grayDark {
+        background-color: $colorGrayLighter;
+      }
+    }
+  }
+}

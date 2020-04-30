@@ -10,6 +10,8 @@ $zLayers: (
   'Modal'
 );
 
+$gridGap: 10px;
+
 :export {
   zLayers: $zLayers;
 }
@@ -36,4 +38,143 @@ $zLayers: (
   }
 
   @return null;
+}
+
+@mixin colorGrid {
+  /* COLORGRID */
+  box-sizing: border-box;
+
+  padding: $gridGap;
+  width: 798px;
+  height: 798px;
+
+  display: grid;
+  gap: $gridGap;
+  grid-template-columns: [start] 1fr 1fr 1fr 1fr [mid] 1fr 1fr 1fr 1fr [end];
+  grid-template-rows: [start] 1fr 1fr 1fr 1fr [mid] 1fr 1fr 1fr 1fr [end];
+
+  background: white;
+
+  div {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    // back-=round-color: rgba(0,0,0,0);
+    // @include transitionDurationOverride(500ms, background-color);
+  }
+
+  /* RED */
+  .redDark {
+    background-color: $colorRedDark;
+    &:hover {
+      background-color: $colorYellow;
+    }
+  }
+  .red {
+    background-color: $colorRed;
+    &:hover {
+      background-color: $colorOrange;
+    }
+  }
+  .orange {
+    background-color: $colorOrange;
+    &:hover {
+      background-color: $colorRed;
+    }
+  }
+  .yellow {
+    background-color: $colorYellow;
+    &:hover {
+      background-color: $colorRedDark;
+    }
+  }
+
+  /* BLUE */
+  .blueDark {
+    background-color: $colorBlueDark;
+    &:hover {
+      background-color: $colorBlueLighter;
+    }
+  }
+  .blue {
+    background-color: $colorBlue;
+    &:hover {
+      background-color: $colorBlueLight;
+    }
+  }
+  .blueLight {
+    background-color: $colorBlueLight;
+    &:hover {
+      background-color: $colorBlue;
+    }
+  }
+  .blueLighter {
+    background-color: $colorBlueLighter;
+    &:hover {
+      background-color: $colorBlueDark;
+    }
+  }
+
+  /* GREEN */
+  .greenDark {
+    background-color: $colorGreenDark;
+    &:hover {
+      background-color: $colorGreenLighter;
+    }
+  }
+  .green {
+    background-color: $colorGreen;
+    &:hover {
+      background-color: $colorGreenLight;
+    }
+  }
+  .greenLight {
+    background-color: $colorGreenLight;
+    &:hover {
+      background-color: $colorGreen;
+    }
+  }
+  .greenLighter {
+    background-color: $colorGreenLighter;
+    &:hover {
+      background-color: $colorGreenDark;
+    }
+  }
+
+  /* GRAY */
+  .grayDark {
+    background-color: $colorGrayDark;
+    &:hover {
+      background-color: $colorGrayLighter;
+    }
+  }
+  .gray {
+    background-color: $colorGray;
+    &:hover {
+      background-color: $colorGrayLight;
+    }
+  }
+  .grayLight {
+    background-color: $colorGrayLight;
+    &:hover {
+      background-color: $colorGray;
+    }
+  }
+  .grayLighter {
+    background-color: $colorGrayLighter;
+    &:hover {
+      background-color: $colorGrayDark;
+    }
+  }
+
+}
+
+@mixin colorGridRaw {
+  @include colorGrid;
+
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }

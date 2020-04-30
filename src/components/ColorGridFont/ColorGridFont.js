@@ -13,7 +13,7 @@ import styles from './ColorGridFont.module.scss';
 // COMPONENT: ColorGrid
 const ColorGrid = (props) => {
   // PROPS
-  const { children } = props;
+  // const { children } = props;
 
   // STATE HOOKS
 
@@ -27,7 +27,7 @@ const ColorGrid = (props) => {
 
   // RENDER: ColorGrid
   return (
-    <div className={`${styles.colorGrid}`}>
+    <div className={`${styles.colorGridFont}`}>
 
       {/* EXCLAMATIONS */}
       <div className={styles.redDark}>
@@ -75,9 +75,10 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
-      <div>a</div>
+      <div></div>
+
       {/* CREATE HACKY HEIGHT */}
-      <div className={`${styles.colorGrid}`}>
+      <div className={`${styles.colorGridFont}`}>
           <div className={styles.red}>
             <div className={styles.orange}>
               <div className={styles.yellow}></div>

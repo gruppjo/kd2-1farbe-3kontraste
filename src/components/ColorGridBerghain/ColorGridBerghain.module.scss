@@ -1,0 +1,142 @@
+@import 'shared.scss';
+
+/* COLORGRIDBERGAIN */
+.colorGridBerghain {
+  @include colorGrid;
+
+  grid-template-areas:
+    "header header header header header header header header"
+    "header header header header header header header header"
+    "building building building building building building building building"
+    "building building building building building building building building"
+    "building building building building building building building building"
+    "building building building building building building building building"
+    ;
+
+  .building {
+    @include colorGridRaw;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: building;
+
+    /* EVERYTHING GRAY
+    /* RED */
+    .redDark {
+      background-color: $colorGrayDark;
+    }
+    .red {
+      background-color: $colorGray;
+    }
+    .orange {
+      background-color: $colorGrayLight;
+    }
+    .yellow {
+      background-color: $colorGrayLighter;
+    }
+
+    /* BLUE */
+    .blueDark {
+      background-color: $colorGrayDark;
+    }
+    .blue {
+      background-color: $colorGray;
+    }
+    .blueLight {
+      background-color: $colorGrayLight;
+    }
+    .blueLighter {
+      background-color: $colorGrayLighter;
+    }
+
+    /* GREEN */
+    .greenDark {
+      background-color: $colorGrayDark;
+    }
+    .green {
+      background-color: $colorGray;
+    }
+    .greenLight {
+      background-color: $colorGrayLight;
+    }
+    .greenLighter {
+      background-color: $colorGrayLighter;
+    }
+
+    /* GRAY */
+    .grayDark {
+      background-color: $colorGrayDark;
+    }
+    .gray {
+      background-color: $colorGray;
+    }
+    .grayLight {
+      background-color: $colorGrayLight;
+    }
+    .grayLighter {
+      background-color: $colorGrayLighter;
+    }
+
+
+
+
+
+    /* HOVER ACTIVATE COLOR */
+    &:hover {
+      /* RED */
+      .redDark {
+        background-color: $colorRedDark;
+      }
+      .red {
+        background-color: $colorRed;
+      }
+      .orange {
+        background-color: $colorOrange;
+      }
+      .yellow {
+        background-color: $colorYellow;
+      }
+
+      /* BLUE */
+      .blueDark {
+        background-color: $colorBlueDark;
+      }
+      .blue {
+        background-color: $colorBlue;
+      }
+      .blueLight {
+        background-color: $colorBlueLight;
+      }
+      .blueLighter {
+        background-color: $colorBlueLighter;
+      }
+
+      /* GREEN */
+      .greenDark {
+        background-color: $colorGreenDark;
+      }
+      .green {
+        background-color: $colorGreen;
+      }
+      .greenLight {
+        background-color: $colorGreenLight;
+      }
+      .greenLighter {
+        background-color: $colorGreenLighter;
+      }
+
+      /* GRAY */
+      .grayDark {
+        background-color: $colorGrayDark;
+      }
+      .gray {
+        background-color: $colorGray;
+      }
+      .grayLight {
+        background-color: $colorGrayLight;
+      }
+      .grayLighter {
+        background-color: $colorGrayLighter;
+      }
+    }
+  }
+
+}

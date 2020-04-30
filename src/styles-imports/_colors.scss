@@ -17,6 +17,29 @@ $colors: (
   'Dark', 'Light'
 );
 
+
+$colorRedDark: rgb(80,0,0);
+$colorRed: red;
+$colorOrange: orange;
+$colorYellow: yellow;
+
+$colorBlueDark: black;
+$colorBlue: blue;
+$colorBlueLight: deepskyblue;
+$colorBlueLighter: lightskyblue;
+
+$colorGreenDark: rgb(0,60,0);
+$colorGreen: green;
+$colorGreenLight: mediumseagreen;
+$colorGreenLighter: springgreen;
+// $colorGreenLighter: rgb(200,255,200);
+
+$colorGrayDark: black;
+$colorGray: rgb(92, 92, 92);
+$colorGrayLight:  rgb(180, 180, 180);
+$colorGrayLighter: rgb(220,220,220);
+
+
 /* PRIMARY */
 $colorPrimary1: #2D72FE;
 $colorPrimary2: #245BCB;
