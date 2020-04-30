@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <ColorGrid>asdf</ColorGrid>
-      {/* <ColorGridFont>asdf</ColorGridFont> */}
+      <ColorGridFont>asdf</ColorGridFont>
       <div className={styles.app}>
         <header className={styles.appHeader}>
           <img src={logo} className={styles.appLogo} alt="logo" />
