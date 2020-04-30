@@ -15,6 +15,7 @@ function App() {
   return (
     <>
       <ColorGrid>asdf</ColorGrid>
+      <h1>I should make a font</h1>
       <ColorGridFont>asdf</ColorGridFont>
       <div className={styles.app}>
         <header className={styles.appHeader}>

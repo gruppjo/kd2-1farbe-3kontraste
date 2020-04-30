@@ -28,13 +28,13 @@ const ColorGrid = (props) => {
   // RENDER: ColorGrid
   return (
     <div className={`${styles.colorGrid}`}>
-      <div className={styles.redDark}>
+      {/* <div className={styles.redDark}>
         <div className={styles.red}>
           <div className={styles.orange}>
             <div className={styles.yellow}></div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.yellow}>
         <div className={styles.orange}>
           <div className={styles.red}>
@@ -42,15 +42,23 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
-
-      <div className={styles.redDark}>
-        <div className={styles.red}>
-          <div className={styles.orange}>
-            <div className={styles.yellow}></div>
+      <div className={styles.greenLighter}>
+        <div className={styles.greenLight}>
+          <div className={styles.green}>
+            <div className={styles.greenDark}>
+            </div>
           </div>
         </div>
       </div>
-      <div>d</div>
+      <div className={styles.greenDark}>
+        <div className={styles.green}>
+          <div className={styles.greenLight}>
+            <div className={styles.greenLighter}>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>a</div>
       <div>a</div>
       <div>a</div>
       <div>a</div>

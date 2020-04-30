@@ -1,4 +1,9 @@
+# 3Kontraste
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Resources / Inspiration
+- [css-colors](https://www.rapidtables.com/web/css/css-color.html)
 
 ## Available Scripts
 
