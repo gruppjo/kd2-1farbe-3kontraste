@@ -1,6 +1,6 @@
 // REACT, STYLE, STORIES & COMPONENT
 import React from 'react';
-import styles from './ColorGrid.module.scss';
+import styles from './ColorGridV2.module.scss';
 
 // ASSETS
 
@@ -10,10 +10,10 @@ import styles from './ColorGrid.module.scss';
 
 // CONFIG & DATA
 
-// COMPONENT: ColorGrid
-const ColorGrid = (props) => {
+// COMPONENT: ColorGridV2
+const ColorGridV2 = (props) => {
   // PROPS
-  // const { children } = props;
+  const { children } = props;
 
   // STATE HOOKS
 
@@ -25,11 +25,10 @@ const ColorGrid = (props) => {
 
   // HELPERS, HANDLES, METHODSHOOKS
 
-  // RENDER: ColorGrid
+  // RENDER: ColorGridV2
   return (
-    <div className={`${styles.colorGrid}`}>
-
-      {/* 1ST ROW */}
+    <div className={`${styles.colorGridV2}`}>
+       {/* 1ST ROW */}
       {/* GRAY */}
       <div className={styles.grayLighter}>
         <div className={styles.grayLight}>
@@ -53,17 +52,17 @@ const ColorGrid = (props) => {
         </div>
       </div>
       {/* COLOR */}
-      <div className={styles.yellowLighter}>
-        <div className={styles.yellowLight}>
-          <div className={styles.yellow}>
-            <div className={styles.yellowDark}></div>
+      <div className={styles.grayLight}>
+        <div className={styles.grayLight}>
+          <div className={styles.grayLight}>
+            <div className={styles.orangeLight}></div>
           </div>
         </div>
       </div>
-      <div className={styles.greenLighter}>
-        <div className={styles.greenLight}>
-          <div className={styles.green}>
-            <div className={styles.greenDark}></div>
+      <div className={styles.grayLight}>
+        <div className={styles.grayLight}>
+          <div className={styles.grayLight}>
+            <div className={styles.greenLighter}></div>
           </div>
         </div>
       </div>
@@ -115,17 +114,17 @@ const ColorGrid = (props) => {
         </div>
       </div>
       {/* COLOR */}
-      <div className={styles.redLighter}>
-        <div className={styles.redLight}>
-          <div className={styles.red}>
-            <div className={styles.redDark}></div>
+      <div className={styles.grayLight}>
+        <div className={styles.grayLight}>
+          <div className={styles.grayLight}>
+            <div className={styles.redLighter}></div>
           </div>
         </div>
       </div>
-      <div className={styles.blueLighter}>
-        <div className={styles.blueLight}>
-          <div className={styles.blue}>
-            <div className={styles.blueDark}></div>
+      <div className={styles.grayLight}>
+        <div className={styles.grayLight}>
+          <div className={styles.grayLight}>
+            <div className={styles.blueLighter}></div>
           </div>
         </div>
       </div>
@@ -279,17 +278,17 @@ const ColorGrid = (props) => {
 
       {/* 5TH ROW */}
       {/* QUALITÄT */}
-      <div className={styles.grayLight}>
-        <div className={styles.grayLight}>
-          <div className={styles.grayLight}>
-            <div className={styles.orangeLight}></div>
+      <div className={styles.yellowLighter}>
+        <div className={styles.yellowLight}>
+          <div className={styles.yellow}>
+            <div className={styles.yellowDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLight}>
-        <div className={styles.grayLight}>
-          <div className={styles.grayLight}>
-            <div className={styles.greenLighter}></div>
+      <div className={styles.greenLighter}>
+        <div className={styles.greenLight}>
+          <div className={styles.green}>
+            <div className={styles.greenDark}></div>
           </div>
         </div>
       </div>
@@ -341,17 +340,17 @@ const ColorGrid = (props) => {
 
       {/* 6TH ROW */}
       {/* QUALITÄT */}
-      <div className={styles.grayLight}>
-        <div className={styles.grayLight}>
-          <div className={styles.grayLight}>
-            <div className={styles.redLighter}></div>
+      <div className={styles.redLighter}>
+        <div className={styles.redLight}>
+          <div className={styles.red}>
+            <div className={styles.redDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLight}>
-        <div className={styles.grayLight}>
-          <div className={styles.grayLight}>
-            <div className={styles.blueLighter}></div>
+      <div className={styles.blueLighter}>
+        <div className={styles.blueLight}>
+          <div className={styles.blue}>
+            <div className={styles.blueDark}></div>
           </div>
         </div>
       </div>
@@ -405,4 +404,4 @@ const ColorGrid = (props) => {
   );
 };
 
-export default ColorGrid;
+export default ColorGridV2;

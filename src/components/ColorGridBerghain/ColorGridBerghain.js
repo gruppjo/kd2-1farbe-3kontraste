@@ -144,7 +144,8 @@ let berghain = (mode) => {
             <div className={styles.grayDark}></div>
           </div>
         </div>
-      </div><div className={styles.grayLighter}>
+      </div>
+      <div className={styles.grayLighter}>
         <div className={styles.grayLight}>
           <div className={styles.gray}>
             <div className={styles.grayDark}></div>

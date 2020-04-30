@@ -10,6 +10,8 @@ import {
   ColorGridBerghain,
   ColorGridBroken,
   ColorGridFont,
+  ColorGridFull,
+  ColorGridV2,
 } from './components';
 
 
@@ -18,6 +20,10 @@ function App() {
     <>
       <h1>Itten</h1>
       <ColorGrid></ColorGrid>
+      <h1>Itten V2</h1>
+      <ColorGridV2></ColorGridV2>
+      <h1>IttenFull</h1>
+      <ColorGridFull></ColorGridFull>
       <h1>Berghain</h1>
       <ColorGridBerghain></ColorGridBerghain>
       <h1>Berghain All</h1>
