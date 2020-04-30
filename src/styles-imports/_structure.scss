@@ -1,0 +1,39 @@
+/* V1.0 based on Jonathan's Gist */
+/* https://gist.github.com/gruppjo/09d5324b2644a9ca9dd43f5fd3cbc5ce */
+
+// The z-index increases from top to bottom
+$zLayers: (
+  'Buffer1',
+  'Buffer2',
+  'HomeHeader',
+  'MainNavigation',
+  'Modal'
+);
+
+:export {
+  zLayers: $zLayers;
+}
+
+@function zIndex($layerName) {
+  @return z($layerName);
+}
+
+@function z($layerName, $searchIn: $zLayers, $layer: null) {
+
+  @for $i from 1 through length($searchIn) {
+    $currentElement: nth($searchIn, $i);
+
+    @if ($currentElement == $layerName) {
+      @if ($layer == null) {
+        $layer: index($searchIn, $layerName);
+      }
+      @return $layer;
+    }
+  }
+
+  @if ($searchIn == $zLayers) {
+    @error "No z-index found for #{$layerName}. Property omitted.";
+  }
+
+  @return null;
+}

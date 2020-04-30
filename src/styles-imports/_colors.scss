@@ -1,0 +1,96 @@
+/* V1.0 based on Jonathan's Gist */
+/* https://gist.github.com/gruppjo/2b0111b865bf1d4382a3b60c4e4c7484 */
+
+/*
+  - Named after bootstrap model
+    https://getbootstrap.com/docs/4.3/getting-started/theming/#theme-colors
+  - Definitions in Wiki
+    https://blueexcellence.atlassian.net/wiki/spaces/BQ/pages/884772/UI+Basics+Colors+Typography+UI+Elements+Layout+basics#Colors
+  - Mostly sorted from dark to light
+*/
+
+$colors: (
+  'Primary1', 'Primary2', 'Primary3', 'Primary4',
+  'Secondary1', 'Secondary2', 'Secondary3',
+  'Danger1', 'Danger2', 'Danger3',
+  'Grey1', 'Grey2', 'Grey3', 'Grey4', 'Grey5',
+  'Dark', 'Light'
+);
+
+/* PRIMARY */
+$colorPrimary1: #2D72FE;
+$colorPrimary2: #245BCB;
+$colorPrimary3: #D5E3FF;
+$colorPrimary4: #F4F7FE;
+
+/* SECONDARY */
+$colorSecondary1: #FECA0C;
+$colorSecondary2: #F0BC00;
+$colorSecondary3: #FEF5D1;
+
+/* DANGER */
+$colorDanger1: #E1292B;
+$colorDanger2: #B42122;
+$colorDanger3: #F9D4D5;
+
+/* GREYS */
+$colorGrey1: #333333;
+$colorGrey2: #999999;
+$colorGrey3: #D3D3D3;
+$colorGrey4: #F2F2F2;
+$colorGrey5: #F5F5F5;
+$colorGrey6: #FBFBFB;
+
+  /* DARK & LIGHT */
+$colorDark: #212121;
+$colorLight: #FFFFFF;
+$colorWhite: #FFFFFF;
+
+/* SHADOWS */
+$shadowDark: 0px 2px 10px rgba(#212121, 0.1);
+
+@function toTextColor($colorKey) {
+  @if $colorKey == 'Primary1'
+    or $colorKey == 'Primary2'
+    or $colorKey == 'Danger1'
+    or $colorKey == 'Danger2'
+    or $colorKey == 'Grey1'
+    or $colorKey == 'Grey2'
+    or $colorKey == 'Dark'
+  {
+    @return $colorLight;
+  }
+  @else {
+    @return $colorDark;
+  }
+}
+
+
+:export {
+  colors: $colors;
+
+  colorPrimary1: $colorPrimary1;
+  colorPrimary2: $colorPrimary2;
+  colorPrimary3: $colorPrimary3;
+  colorPrimary4: $colorPrimary4;
+
+  colorDanger1: $colorDanger1;
+  colorDanger2: $colorDanger2;
+  colorDanger3: $colorDanger3;
+
+  colorSecondary1: $colorSecondary1;
+  colorSecondary2: $colorSecondary2;
+  colorSecondary3: $colorSecondary3;
+
+  colorGrey1: $colorGrey1;
+  colorGrey2: $colorGrey2;
+  colorGrey3: $colorGrey3;
+  colorGrey4: $colorGrey4;
+  colorGrey5: $colorGrey5;
+  colorGrey6: $colorGrey6;
+
+  colorDark: $colorDark;
+  colorLight: $colorLight;
+
+  shadowDark: $shadowDark;
+}
