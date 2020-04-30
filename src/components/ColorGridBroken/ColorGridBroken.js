@@ -30,7 +30,7 @@ const ColorGridBroken = (props) => {
     <div className={`${styles.colorGridBroken}`}>
 
       {/* 1ST ROW */}
-      <div className={styles.yellow}>
+      <div className={styles.orangeLight}>
         <div className={styles.orange}>
           <div className={styles.red}>
             <div className={styles.redDark}></div>
@@ -45,8 +45,8 @@ const ColorGridBroken = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.yellow}>
-        <div className={styles.yellow}>
+      <div className={styles.orangeLight}>
+        <div className={styles.orangeLight}>
           <div className={styles.redDark}>
             <div className={styles.redDark}></div>
           </div>
@@ -60,8 +60,8 @@ const ColorGridBroken = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.yellow}>
-        <div className={styles.yellow}>
+      <div className={styles.orangeLight}>
+        <div className={styles.orangeLight}>
           <div className={styles.grayLight}>
             <div className={styles.grayLight}></div>
           </div>
@@ -77,7 +77,7 @@ const ColorGridBroken = (props) => {
       <div className={styles.grayLight}>
         <div className={styles.grayLight}>
           <div className={styles.grayLight}>
-            <div className={styles.yellow}></div>
+            <div className={styles.orangeLight}></div>
           </div>
         </div>
       </div>

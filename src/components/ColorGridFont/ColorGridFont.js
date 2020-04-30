@@ -33,11 +33,11 @@ const ColorGrid = (props) => {
       <div className={styles.redDark}>
         <div className={styles.red}>
           <div className={styles.orange}>
-            <div className={styles.yellow}></div>
+            <div className={styles.orangeLight}></div>
           </div>
         </div>
       </div>
-      <div className={styles.yellow}>
+      <div className={styles.orangeLight}>
         <div className={styles.orange}>
           <div className={styles.red}>
             <div className={styles.redDark}></div>
@@ -81,7 +81,7 @@ const ColorGrid = (props) => {
       <div className={`${styles.colorGridFont}`}>
           <div className={styles.red}>
             <div className={styles.orange}>
-              <div className={styles.yellow}></div>
+              <div className={styles.orangeLight}></div>
             </div>
           </div>
       </div>
@@ -105,11 +105,11 @@ const ColorGrid = (props) => {
       <div className={styles.redDark}>
         <div className={styles.red}>
           <div className={styles.orange}>
-            <div className={styles.yellow}></div>
+            <div className={styles.orangeLight}></div>
           </div>
         </div>
       </div>
-      <div className={styles.yellow}>
+      <div className={styles.orangeLight}>
         <div className={styles.orange}>
           <div className={styles.red}>
             <div className={styles.redDark}></div>

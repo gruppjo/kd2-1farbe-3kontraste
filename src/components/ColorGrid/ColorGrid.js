@@ -37,7 +37,8 @@ const ColorGrid = (props) => {
       </div> */}
 
       {/* 1ST ROW */}
-      <div className={styles.yellow}>
+      {/* QUALITÄT */}
+      <div className={styles.orangeLight}>
         <div className={styles.orange}>
           <div className={styles.red}>
             <div className={styles.redDark}></div>
@@ -52,8 +53,9 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.yellow}>
-        <div className={styles.yellow}>
+      {/* HELL DUNKEL */}
+      <div className={styles.orangeLight}>
+        <div className={styles.orangeLight}>
           <div className={styles.redDark}>
             <div className={styles.redDark}></div>
           </div>
@@ -67,8 +69,9 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.yellow}>
-        <div className={styles.yellow}>
+      {/* SIMULTAN */}
+      <div className={styles.orangeLight}>
+        <div className={styles.orangeLight}>
           <div className={styles.grayLight}>
             <div className={styles.grayLight}></div>
           </div>
@@ -81,10 +84,11 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
+      {/* QUANTITÄT */}
       <div className={styles.grayLight}>
         <div className={styles.grayLight}>
           <div className={styles.grayLight}>
-            <div className={styles.yellow}></div>
+            <div className={styles.orangeLight}></div>
           </div>
         </div>
       </div>
@@ -98,6 +102,7 @@ const ColorGrid = (props) => {
 
 
       {/* 2ND ROW */}
+      {/* QUALITÄT */}
       <div className={styles.grayLighter}>
         <div className={styles.grayLight}>
           <div className={styles.gray}>
@@ -112,6 +117,7 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
+      {/* HELL DUNKEL */}
       <div className={styles.grayLighter}>
         <div className={styles.grayLighter}>
           <div className={styles.grayDark}>
@@ -126,6 +132,7 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
+      {/* SIMULTAN */}
       <div className={styles.gray}>
         <div className={styles.gray}>
           <div className={styles.grayLight}>
@@ -140,6 +147,7 @@ const ColorGrid = (props) => {
           </div>
         </div>
       </div>
+      {/* QUANTITÄT */}
       <div className={styles.grayLight}>
         <div className={styles.grayLight}>
           <div className={styles.grayLight}>
@@ -156,114 +164,129 @@ const ColorGrid = (props) => {
       </div>
 
       {/* 3RD ROW */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      {/* QUALITÄT */}
+      <div className={styles.yellowLighter}>
+        <div className={styles.yellowLight}>
+          <div className={styles.yellow}>
+            <div className={styles.yellowDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      <div className={styles.greenLighter}>
+        <div className={styles.greenLight}>
+          <div className={styles.green}>
+            <div className={styles.greenDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      {/* KOMPLEMENTÄR */}
+      <div className={styles.yellowLighter}>
+        <div className={styles.blueLight}>
+          <div className={styles.yellow}>
+            <div className={styles.blueDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      <div className={styles.greenLighter}>
+        <div className={styles.redLight}>
+          <div className={styles.green}>
+            <div className={styles.redDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      {/* WARM KALT */}
+      <div className={styles.yellowLighter}>
+        <div className={styles.greenLight}>
+          <div className={styles.yellow}>
+            <div className={styles.greenDark}></div>
           </div>
         </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      </div>
+      <div className={styles.greenLighter}>
+        <div className={styles.yellowLight}>
+          <div className={styles.green}>
+            <div className={styles.yellowDark}></div>
+          </div>
+        </div>
+      </div>
+      {/* BUNT */}
+      <div className={styles.yellowLighter}>
+        <div className={styles.greenLight}>
+          <div className={styles.blue}>
+            <div className={styles.redDark}></div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.greenLighter}>
+        <div className={styles.blueLight}>
+          <div className={styles.red}>
+            <div className={styles.yellowLight}></div>
           </div>
         </div>
       </div>
 
       {/* 4TH ROW */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      {/* QUALITÄT */}
+      <div className={styles.redLighter}>
+        <div className={styles.redLight}>
+          <div className={styles.red}>
+            <div className={styles.redDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      <div className={styles.blueLighter}>
+        <div className={styles.blueLight}>
+          <div className={styles.blue}>
+            <div className={styles.blueDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      {/* KOMPLEMENTÄR */}
+      <div className={styles.redLighter}>
+        <div className={styles.greenLight}>
+          <div className={styles.red}>
+            <div className={styles.greenDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      <div className={styles.blueLighter}>
+        <div className={styles.yellowLight}>
+          <div className={styles.blue}>
+            <div className={styles.yellowDark}></div>
           </div>
         </div>
       </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
+      {/* WARM / KALT */}
+      <div className={styles.redLighter}>
+        <div className={styles.blueLight}>
+          <div className={styles.red}>
+            <div className={styles.blueDark}></div>
           </div>
         </div>
       </div>
+      <div className={styles.blueLighter}>
+        <div className={styles.redLight}>
+          <div className={styles.blue}>
+            <div className={styles.redDark}></div>
+          </div>
+        </div>
+      </div>
+      {/* BUNT */}
+      <div className={styles.redLighter}>
+        <div className={styles.yellowLight}>
+          <div className={styles.green}>
+            <div className={styles.blueDark}></div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.blueLighter}>
+        <div className={styles.redLight}>
+          <div className={styles.yellow}>
+            <div className={styles.greenDark}></div>
+          </div>
+        </div>
+      </div>
+
 
       {/* 5TH ROW */}
       <div className={styles.grayLighter}>
@@ -272,8 +295,7 @@ const ColorGrid = (props) => {
             <div className={styles.grayDark}></div>
           </div>
         </div>
-      </div>
-      <div className={styles.grayLighter}>
+      </div><div className={styles.grayLighter}>
         <div className={styles.grayLight}>
           <div className={styles.gray}>
             <div className={styles.grayDark}></div>

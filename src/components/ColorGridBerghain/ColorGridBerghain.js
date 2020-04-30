@@ -13,7 +13,7 @@ let berghain = (mode) => {
   return (
     <>
       {/* 3RD ROW */}
-      <div className={mode ? styles.yellow : styles.grayLighter }>
+      <div className={mode ? styles.orangeLight : styles.grayLighter }>
         <div className={mode ? styles.orange : styles.grayLight }>
           <div className={mode ? styles.red : styles.gray }>
             <div className={mode ? styles.redDark : styles.grayDark }></div>
@@ -268,7 +268,7 @@ const ColorGridBerghain = (props) => {
       <div className={`${styles.colorGridBerghain}`}>
 
         {/* 1ST ROW */}
-        <div className={styles.yellow}>
+        <div className={styles.orangeLight}>
           <div className={styles.orange}>
             <div className={styles.red}>
               <div className={styles.redDark}></div>
@@ -283,8 +283,8 @@ const ColorGridBerghain = (props) => {
             </div>
           </div>
         </div>
-        <div className={styles.yellow}>
-          <div className={styles.yellow}>
+        <div className={styles.orangeLight}>
+          <div className={styles.orangeLight}>
             <div className={styles.redDark}>
               <div className={styles.redDark}></div>
             </div>
@@ -298,8 +298,8 @@ const ColorGridBerghain = (props) => {
             </div>
           </div>
         </div>
-        <div className={styles.yellow}>
-          <div className={styles.yellow}>
+        <div className={styles.orangeLight}>
+          <div className={styles.orangeLight}>
             <div className={styles.grayLight}>
               <div className={styles.grayLight}></div>
             </div>
@@ -315,7 +315,7 @@ const ColorGridBerghain = (props) => {
         <div className={styles.grayLight}>
           <div className={styles.grayLight}>
             <div className={styles.grayLight}>
-              <div className={styles.yellow}></div>
+              <div className={styles.orangeLight}></div>
             </div>
           </div>
         </div>

@@ -65,7 +65,7 @@ $gridGap: 10px;
     // @include transitionDurationOverride(500ms, background-color);
   }
 
-  /* RED */
+  /* RED, YELLOW MIXED */
   .redDark {
     background-color: $colorRedDark;
     &:hover {
@@ -84,8 +84,60 @@ $gridGap: 10px;
       background-color: $colorRed;
     }
   }
+  .orangeLight {
+    background-color: $colorOrangeLight;
+    &:hover {
+      background-color: $colorRedDark;
+    }
+  }
+
+  /* YELLOW */
+  .yellowDark {
+    background-color: $colorYellowDark;
+    &:hover {
+      background-color: $colorYellowLighter;
+    }
+  }
   .yellow {
     background-color: $colorYellow;
+    &:hover {
+      background-color: $colorYellowLight;
+    }
+  }
+  .yellowLight {
+    background-color: $colorYellowLight;
+    &:hover {
+      background-color: $colorYellow;
+    }
+  }
+  .yellowLighter {
+    background-color: $colorYellowLighter;
+    &:hover {
+      background-color: $colorYellowDark;
+    }
+  }
+
+  /* RED */
+  .redDark {
+    background-color: $colorRedDark;
+    &:hover {
+      background-color: $colorRedLighter;
+    }
+  }
+  .red {
+    background-color: $colorRed;
+    &:hover {
+      background-color: $colorRedLight;
+    }
+  }
+  .redLight {
+    background-color: $colorRedLight;
+    &:hover {
+      background-color: $colorRed;
+    }
+  }
+  .redLighter {
+    background-color: $colorRedLighter;
     &:hover {
       background-color: $colorRedDark;
     }
