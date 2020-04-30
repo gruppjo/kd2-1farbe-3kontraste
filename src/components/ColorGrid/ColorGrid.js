@@ -28,7 +28,50 @@ const ColorGrid = (props) => {
   // RENDER: ColorGrid
   return (
     <div className={`${styles.colorGrid}`}>
-      { children }
+      <div className={styles.redDark}>
+        <div className={styles.red}>
+          <div className={styles.orange}>
+            <div className={styles.yellow}></div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.yellow}>
+        <div className={styles.orange}>
+          <div className={styles.red}>
+            <div className={styles.redDark}></div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.redDark}>
+        <div className={styles.red}>
+          <div className={styles.orange}>
+            <div className={styles.yellow}></div>
+          </div>
+        </div>
+      </div>
+      <div>d</div>
+      <div>a</div>
+      <div>a</div>
+      <div>a</div>
+      <div>a</div>
+
+      <div className={styles.blueDark}>
+        <div className={styles.blue}>
+          <div className={styles.blueLight}>
+            <div className={styles.blueLighter}>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.blueLighter}>
+        <div className={styles.blueLight}>
+          <div className={styles.blue}>
+            <div className={styles.blueDark}></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
