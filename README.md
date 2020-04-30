@@ -4,10 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Resources / Inspiration
 - [css-colors](https://www.rapidtables.com/web/css/css-color.html)
+- komplementär [wikipedia](https://de.wikipedia.org/wiki/Komplement%C3%A4rfarbe)
 
 ## Ideas
 - Itten
   - Color variant to improve warm / cold vs. complementary
+  - brighter colors for "lighter" for red and blue
   - Dreiecke
 - Gebäude nachbauen: z.B Berghain
   - Georg: le corbusier
