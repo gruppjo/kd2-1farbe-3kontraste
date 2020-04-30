@@ -1,0 +1,88 @@
+{
+  // Place your snippets for javascriptreact here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  //  "prefix": "log",
+  //  "body": [
+  //    "console.log('$1');",
+  //    "$2"
+  //  ],
+  //  "description": "Log output to console"
+  // }
+  "Kd: React Component": {
+    "prefix": "kd-component",
+    "body": [
+      "// REACT, STYLE, STORIES & COMPONENT",
+      "import React from 'react';",
+      "import styles from './${TM_FILENAME_BASE}.module.scss';",
+      "",
+      "// ASSETS",
+      "",
+      "// STORE",
+      "",
+      "// OTHER COMPONENTS",
+      "",
+      "// CONFIG & DATA",
+      "",
+      "// COMPONENT: ${TM_FILENAME_BASE}",
+      "const ${TM_FILENAME_BASE} = (props) => {",
+      "\t// PROPS",
+      "\tconst { children$0 } = props;",
+      "\t",
+      "\t// STATE HOOKS",
+      "",
+      "\t// STORE",
+      "",
+      "\t// EFFECT HOOKS",
+      "",
+      "\t// OTHER HOOKS",
+      "",
+      "\t// HELPERS, HANDLES, METHODSHOOKS",
+      "",
+      "\t// RENDER: ${TM_FILENAME_BASE}",
+      "\treturn (",
+      "\t\t<div className={`${styles.${TM_FILENAME_BASE/([A-Z])/${1:/downcase}/}}`}>",
+      "\t\t\t{ children }",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};",
+    ],
+    "description": ""
+  },
+  "Kd: React Stories": {
+    "prefix": "kd-stories",
+    "body": [
+      "import React from 'react';",
+      "",
+      "/* STORYBOOK & PLUGINS */",
+      "import { storiesOf } from '@storybook/react';",
+      "import { withKnobs, text } from '@storybook/addon-knobs/react';",
+      "",
+      "/* COMPONENTS */",
+      "import ${TM_FILENAME_BASE/\\.[A-z]*//g} from './${TM_FILENAME_BASE/\\.[A-z]*//g}';",
+      "",
+      "/* STORIES */",
+      "storiesOf('${TM_FILENAME_BASE/\\.[A-z]*//g}', module)",
+      "\t.addDecorator(withKnobs)",
+      "\t.add('Default', () => (",
+      "\t\t<${TM_FILENAME_BASE/\\.[A-z]*//g}>",
+      "\t\t\t{text('text', 'Default ${TM_FILENAME_BASE/\\.[A-z]*//g}')}",
+      "\t\t</${TM_FILENAME_BASE/\\.[A-z]*//g}>",
+      "\t));",
+      ""
+    ],
+    "description": ""
+  },
+  "Kd: React Index": {
+    "prefix": "kd-index",
+    "body": [
+      "export { default } from './$1.js';"
+    ],
+    "description": ""
+  }
+}
