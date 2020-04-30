@@ -12,8 +12,8 @@
   //  ],
   //  "description": "Log output to console"
   // }
-  "Blu: React SCSS": {
-    "prefix": "blu-scss",
+  "KD: React SCSS": {
+    "prefix": "kd-scss",
     "body": [
       "@import 'shared.scss';",
       "",
