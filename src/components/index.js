@@ -1,6 +1,7 @@
-export { default as ColorGrid } from './ColorGrid';
-export { default as ColorGridBerghain } from './ColorGridBerghain';
-export { default as ColorGridBroken } from './ColorGridBroken';
-export { default as ColorGridFont } from './ColorGridFont';
-export { default as ColorGridFull } from './ColorGridFull';
-export { default as ColorGridV2 } from './ColorGridV2';
+export { ColorGrid } from './ColorGrid/ColorGrid';
+export { ColorGridBerghain } from './ColorGrid/ColorGridBerghain';
+export { ColorGridItem } from './ColorGrid/ColorGridItem';
+export { ColorGridBroken } from './ColorGrid/ColorGridBroken';
+export { ColorGridFont } from './ColorGrid/ColorGridFont';
+export { ColorGridFull } from './ColorGrid/ColorGridFull';
+export { ColorGridV2 } from './ColorGrid/ColorGridV2';

@@ -7,13 +7,14 @@ import styles from './ColorGridFull.module.scss';
 // STORE
 
 // OTHER COMPONENTS
+import { ColorGridItem } from '../ColorGridItem';
 
 // CONFIG & DATA
 
 // COMPONENT: ColorGridFull
 const ColorGridFull = (props) => {
   // PROPS
-  const { children } = props;
+  // const { children } = props;
 
   // STATE HOOKS
 
@@ -37,14 +38,7 @@ const ColorGridFull = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.greenLighter}>
-        <div className={styles.greenLight}>
-          <div className={styles.green}>
-            <div className={styles.greenDark}>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='green'></ColorGridItem>
       {/* HELL DUNKEL */}
       <div className={styles.orangeLight}>
         <div className={styles.orangeLight}>
@@ -95,20 +89,8 @@ const ColorGridFull = (props) => {
 
       {/* 2ND ROW */}
       {/* QUALITÄT */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.blueLighter}>
-        <div className={styles.blueLight}>
-          <div className={styles.blue}>
-            <div className={styles.blueDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem color='blue'></ColorGridItem>
       {/* HELL DUNKEL */}
       <div className={styles.grayLighter}>
         <div className={styles.grayLighter}>
@@ -157,20 +139,8 @@ const ColorGridFull = (props) => {
 
       {/* 3RD ROW */}
       {/* QUALITÄT */}
-      <div className={styles.yellowLighter}>
-        <div className={styles.yellowLight}>
-          <div className={styles.yellow}>
-            <div className={styles.yellowDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.greenLighter}>
-        <div className={styles.greenLight}>
-          <div className={styles.green}>
-            <div className={styles.greenDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='yellow'></ColorGridItem>
+      <ColorGridItem color='green'></ColorGridItem>
       {/* KOMPLEMENTÄR */}
       <div className={styles.yellowLighter}>
         <div className={styles.blueLight}>
@@ -219,20 +189,8 @@ const ColorGridFull = (props) => {
 
       {/* 4TH ROW */}
       {/* QUALITÄT */}
-      <div className={styles.redLighter}>
-        <div className={styles.redLight}>
-          <div className={styles.red}>
-            <div className={styles.redDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.blueLighter}>
-        <div className={styles.blueLight}>
-          <div className={styles.blue}>
-            <div className={styles.blueDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='red'></ColorGridItem>
+      <ColorGridItem color='blue'></ColorGridItem>
       {/* KOMPLEMENTÄR */}
       <div className={styles.redLighter}>
         <div className={styles.greenLight}>
@@ -282,21 +240,8 @@ const ColorGridFull = (props) => {
 
       {/* 5TH ROW */}
       {/* QUALITÄT */}
-      <div className={styles.yellowLighter}>
-        <div className={styles.yellowLight}>
-          <div className={styles.yellow}>
-            <div className={styles.yellowDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.greenLighter}>
-        <div className={styles.greenLight}>
-          <div className={styles.green}>
-            <div className={styles.greenDark}>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='yellow'></ColorGridItem>
+      <ColorGridItem color='green'></ColorGridItem>
       {/* HELL DUNKEL */}
       <div className={styles.orangeLight}>
         <div className={styles.orangeLight}>
@@ -347,20 +292,8 @@ const ColorGridFull = (props) => {
 
       {/* 6TH ROW */}
       {/* QUALITÄT */}
-      <div className={styles.redLighter}>
-        <div className={styles.redLight}>
-          <div className={styles.red}>
-            <div className={styles.redDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.blueLighter}>
-        <div className={styles.blueLight}>
-          <div className={styles.blue}>
-            <div className={styles.blueDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='red'></ColorGridItem>
+      <ColorGridItem color='blue'></ColorGridItem>
       {/* HELL DUNKEL */}
       <div className={styles.redLighter}>
         <div className={styles.redLighter}>

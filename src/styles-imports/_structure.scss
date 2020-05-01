@@ -40,6 +40,176 @@ $gridGap: 10px;
   @return null;
 }
 
+@mixin colorGridItem {
+
+  &, div {
+
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    // back-=round-color: rgba(0,0,0,0);
+    // @include transitionDurationOverride(500ms, background-color);
+
+    /* RED, YELLOW MIXED */
+    &.redDark {
+      background-color: $colorRedDark;
+      &:hover, &.active {
+        background-color: $colorYellow;
+      }
+    }
+    &.red {
+      background-color: $colorRed;
+      &:hover, &.active {
+        background-color: $colorOrange;
+      }
+    }
+    &.orange {
+      background-color: $colorOrange;
+      &:hover, &.active {
+        background-color: $colorRed;
+      }
+    }
+    &.orangeLight {
+      background-color: $colorOrangeLight;
+      &:hover, &.active {
+        background-color: $colorRedDark;
+      }
+    }
+
+    /* YELLOW */
+    &.yellowDark {
+      background-color: $colorYellowDark;
+      &:hover, &.active {
+        background-color: $colorYellowLighter;
+      }
+    }
+    &.yellow {
+      background-color: $colorYellow;
+      &:hover, &.active {
+        background-color: $colorYellowLight;
+      }
+    }
+    &.yellowLight {
+      background-color: $colorYellowLight;
+      &:hover, &.active {
+        background-color: $colorYellow;
+      }
+    }
+    &.yellowLighter {
+      background-color: $colorYellowLighter;
+      &:hover, &.active {
+        background-color: $colorYellowDark;
+      }
+    }
+
+    /* RED */
+    &.redDark {
+      background-color: $colorRedDark;
+      &:hover, &.active {
+        background-color: $colorRedLighter;
+      }
+    }
+    &.red {
+      background-color: $colorRed;
+      &:hover, &.active {
+        background-color: $colorRedLight;
+      }
+    }
+    &.redLight {
+      background-color: $colorRedLight;
+      &:hover, &.active {
+        background-color: $colorRed;
+      }
+    }
+    &.redLighter {
+      background-color: $colorRedLighter;
+      &:hover, &.active {
+        background-color: $colorRedDark;
+      }
+    }
+
+    /* BLUE */
+    &.blueDark {
+      background-color: $colorBlueDark;
+      &:hover, &.active {
+        background-color: $colorBlueLighter;
+      }
+    }
+    &.blue {
+      background-color: $colorBlue;
+      &:hover, &.active {
+        background-color: $colorBlueLight;
+      }
+    }
+    &.blueLight {
+      background-color: $colorBlueLight;
+      &:hover, &.active {
+        background-color: $colorBlue;
+      }
+    }
+    &.blueLighter {
+      background-color: $colorBlueLighter;
+      &:hover, &.active {
+        background-color: $colorBlueDark;
+      }
+    }
+
+    /* GREEN */
+    &.greenDark {
+      background-color: $colorGreenDark;
+      &:hover, &.active {
+        background-color: $colorGreenLighter;
+      }
+    }
+    &.green {
+      background-color: $colorGreen;
+      &:hover, &.active {
+        background-color: $colorGreenLight;
+      }
+    }
+    &.greenLight {
+      background-color: $colorGreenLight;
+      &:hover, &.active {
+        background-color: $colorGreen;
+      }
+    }
+    &.greenLighter {
+      background-color: $colorGreenLighter;
+      &:hover, &.active {
+        background-color: $colorGreenDark;
+      }
+    }
+
+    /* GRAY */
+    &.grayDark {
+      background-color: $colorGrayDark;
+      &:hover, &.active {
+        background-color: $colorGrayLighter;
+      }
+    }
+    &.gray {
+      background-color: $colorGray;
+      &:hover, &.active {
+        background-color: $colorGrayLight;
+      }
+    }
+    &.grayLight {
+      background-color: $colorGrayLight;
+      &:hover, &.active {
+        background-color: $colorGray;
+      }
+    }
+    &.grayLighter {
+      background-color: $colorGrayLighter;
+      &:hover, &.active {
+        background-color: $colorGrayDark;
+      }
+    }
+  }
+}
+
 @mixin colorGrid {
   /* COLORGRID */
   box-sizing: border-box;
@@ -56,169 +226,7 @@ $gridGap: 10px;
   background: white;
 
   div {
-    cursor: pointer;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    // back-=round-color: rgba(0,0,0,0);
-    // @include transitionDurationOverride(500ms, background-color);
-  }
-
-  /* RED, YELLOW MIXED */
-  .redDark {
-    background-color: $colorRedDark;
-    &:hover {
-      background-color: $colorYellow;
-    }
-  }
-  .red {
-    background-color: $colorRed;
-    &:hover {
-      background-color: $colorOrange;
-    }
-  }
-  .orange {
-    background-color: $colorOrange;
-    &:hover {
-      background-color: $colorRed;
-    }
-  }
-  .orangeLight {
-    background-color: $colorOrangeLight;
-    &:hover {
-      background-color: $colorRedDark;
-    }
-  }
-
-  /* YELLOW */
-  .yellowDark {
-    background-color: $colorYellowDark;
-    &:hover {
-      background-color: $colorYellowLighter;
-    }
-  }
-  .yellow {
-    background-color: $colorYellow;
-    &:hover {
-      background-color: $colorYellowLight;
-    }
-  }
-  .yellowLight {
-    background-color: $colorYellowLight;
-    &:hover {
-      background-color: $colorYellow;
-    }
-  }
-  .yellowLighter {
-    background-color: $colorYellowLighter;
-    &:hover {
-      background-color: $colorYellowDark;
-    }
-  }
-
-  /* RED */
-  .redDark {
-    background-color: $colorRedDark;
-    &:hover {
-      background-color: $colorRedLighter;
-    }
-  }
-  .red {
-    background-color: $colorRed;
-    &:hover {
-      background-color: $colorRedLight;
-    }
-  }
-  .redLight {
-    background-color: $colorRedLight;
-    &:hover {
-      background-color: $colorRed;
-    }
-  }
-  .redLighter {
-    background-color: $colorRedLighter;
-    &:hover {
-      background-color: $colorRedDark;
-    }
-  }
-
-  /* BLUE */
-  .blueDark {
-    background-color: $colorBlueDark;
-    &:hover {
-      background-color: $colorBlueLighter;
-    }
-  }
-  .blue {
-    background-color: $colorBlue;
-    &:hover {
-      background-color: $colorBlueLight;
-    }
-  }
-  .blueLight {
-    background-color: $colorBlueLight;
-    &:hover {
-      background-color: $colorBlue;
-    }
-  }
-  .blueLighter {
-    background-color: $colorBlueLighter;
-    &:hover {
-      background-color: $colorBlueDark;
-    }
-  }
-
-  /* GREEN */
-  .greenDark {
-    background-color: $colorGreenDark;
-    &:hover {
-      background-color: $colorGreenLighter;
-    }
-  }
-  .green {
-    background-color: $colorGreen;
-    &:hover {
-      background-color: $colorGreenLight;
-    }
-  }
-  .greenLight {
-    background-color: $colorGreenLight;
-    &:hover {
-      background-color: $colorGreen;
-    }
-  }
-  .greenLighter {
-    background-color: $colorGreenLighter;
-    &:hover {
-      background-color: $colorGreenDark;
-    }
-  }
-
-  /* GRAY */
-  .grayDark {
-    background-color: $colorGrayDark;
-    &:hover {
-      background-color: $colorGrayLighter;
-    }
-  }
-  .gray {
-    background-color: $colorGray;
-    &:hover {
-      background-color: $colorGrayLight;
-    }
-  }
-  .grayLight {
-    background-color: $colorGrayLight;
-    &:hover {
-      background-color: $colorGray;
-    }
-  }
-  .grayLighter {
-    background-color: $colorGrayLighter;
-    &:hover {
-      background-color: $colorGrayDark;
-    }
+    @include colorGridItem;
   }
 
 }

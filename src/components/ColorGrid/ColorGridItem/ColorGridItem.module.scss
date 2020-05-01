@@ -1,0 +1,6 @@
+@import 'shared.scss';
+
+/* COLORGRIDITEM */
+.colorGridItem {
+  @include colorGridItem;
+}

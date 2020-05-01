@@ -1,5 +1,5 @@
 // REACT, STYLE, STORIES & COMPONENT
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './ColorGrid.module.scss';
 
 // ASSETS
@@ -7,6 +7,7 @@ import styles from './ColorGrid.module.scss';
 // STORE
 
 // OTHER COMPONENTS
+import { ColorGridItem } from '../ColorGridItem';
 
 // CONFIG & DATA
 
@@ -14,12 +15,61 @@ import styles from './ColorGrid.module.scss';
 const ColorGrid = (props) => {
   // PROPS
   // const { children } = props;
+  const [ actives, setActives] = useState([]);
+  const [ activeIndex, setActiveIndex] = useState(0);
+  const [ activeDirection, setActiveDirection ] = useState('up');
 
   // STATE HOOKS
 
   // STORE
 
+  const inAndOut = useCallback(() => {
+    const actives = [activeIndex];
+    setActives(actives);
+    let nextActiveIndex = activeIndex + ( activeDirection === 'up' ? 1 : -1);
+    if (nextActiveIndex === 0) {
+      setActiveDirection('up');
+    }
+    else if (nextActiveIndex === 3) {
+      setActiveDirection('down');
+    }
+    setActiveIndex(nextActiveIndex);
+    // console.log('runs every second',[activeIndex]);
+  }, [activeIndex, activeDirection]);
+
+  const inAndOutPersist = useCallback(() => {
+    const actives = [...Array(activeIndex + 1).keys()].map((index) => index);
+    setActives(actives);
+    let nextActiveIndex = activeIndex + ( activeDirection === 'up' ? 1 : -1);
+    if (nextActiveIndex === 0) {
+      setActiveDirection('up');
+    }
+    else if (nextActiveIndex === 3) {
+      setActiveDirection('down');
+    }
+    setActiveIndex(nextActiveIndex);
+    // console.log('runs every second',[activeIndex]);
+  }, [activeIndex, activeDirection]);
+
+  const outPersist = useCallback(() => {
+    // TODO: doesn't work yet, colorGridItem activeClass obviously doesn't overwrite colorClass
+    const actives = [activeIndex];
+    setActives(actives);
+    let nextActiveIndex = activeIndex - 1;
+    if (nextActiveIndex < 0) {
+      nextActiveIndex = 3;
+    }
+    setActiveIndex(nextActiveIndex);
+    // console.log('runs every second',[activeIndex]);
+  }, [activeIndex]);
+
   // EFFECT HOOKS
+  useEffect(() => {
+    const interval = setInterval(() => {
+      inAndOut();
+    }, 1500);
+    return () => clearInterval(interval);
+  }, [inAndOut]);
 
   // OTHER HOOKS
 
@@ -31,142 +81,36 @@ const ColorGrid = (props) => {
 
       {/* 1ST ROW */}
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      {/* <ColorGridItem active={actives}></ColorGridItem> */}
+      <ColorGridItem actives={actives}></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
       {/* COLOR */}
-      <div className={styles.yellowLighter}>
-        <div className={styles.yellowLight}>
-          <div className={styles.yellow}>
-            <div className={styles.yellowDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.greenLighter}>
-        <div className={styles.greenLight}>
-          <div className={styles.green}>
-            <div className={styles.greenDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='yellow'></ColorGridItem>
+      <ColorGridItem color='green'></ColorGridItem>
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
 
 
       {/* 2ND ROW */}
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
       {/* COLOR */}
-      <div className={styles.redLighter}>
-        <div className={styles.redLight}>
-          <div className={styles.red}>
-            <div className={styles.redDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.blueLighter}>
-        <div className={styles.blueLight}>
-          <div className={styles.blue}>
-            <div className={styles.blueDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem color='red'></ColorGridItem>
+      <ColorGridItem color='blue'></ColorGridItem>
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div><div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
 
       {/* 3RD ROW */}
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
       {/* HELL DUNKEL */}
       <div className={styles.yellowLighter}>
         <div className={styles.yellowLighter}>
@@ -199,38 +143,14 @@ const ColorGrid = (props) => {
         </div>
       </div>
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
 
 
       {/* 4TH ROW */}
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
       {/* HELL DUNKEL */}
       <div className={styles.redLighter}>
         <div className={styles.redLighter}>
@@ -262,20 +182,8 @@ const ColorGrid = (props) => {
         </div>
       </div>
       {/* GRAY */}
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.grayLighter}>
-        <div className={styles.grayLight}>
-          <div className={styles.gray}>
-            <div className={styles.grayDark}></div>
-          </div>
-        </div>
-      </div>
+      <ColorGridItem></ColorGridItem>
+      <ColorGridItem></ColorGridItem>
 
       {/* 5TH ROW */}
       {/* QUALITÄT */}
